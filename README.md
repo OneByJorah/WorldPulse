@@ -4,10 +4,10 @@
 
 **Your own intelligence terminal. 27 sources. One command. Zero cloud.**
 
-## [Visit The Live Site: crucix.live](https://www.crucix.live/)
+## [Visit The Live Site: WorldPulse.live](https://www.WorldPulse.live/)
 
-[![Live Website](https://img.shields.io/badge/live-crucix.live-00d4ff?style=for-the-badge)](https://www.crucix.live/)
-[![Open Demo](https://img.shields.io/badge/open-live%20dashboard-0b1220?style=for-the-badge&logo=googlechrome&logoColor=white)](https://www.crucix.live/)
+[![Live Website](https://img.shields.io/badge/live-WorldPulse.live-00d4ff?style=for-the-badge)](https://www.WorldPulse.live/)
+[![Open Demo](https://img.shields.io/badge/open-live%20dashboard-0b1220?style=for-the-badge&logo=googlechrome&logoColor=white)](https://www.WorldPulse.live/)
 
 [![Node.js 22+](https://img.shields.io/badge/node-22%2B-brightgreen)](#quick-start)
 [![License: AGPL v3](https://img.shields.io/badge/license-AGPLv3-blue.svg)](LICENSE)
@@ -17,7 +17,7 @@
 
 **Enter The Signal Network**
 
-[![Signal Wire](https://img.shields.io/badge/Signal%20Wire-%40crucixmonitor-111111?style=for-the-badge&logo=x&logoColor=white)](https://x.com/crucixmonitor)
+[![Signal Wire](https://img.shields.io/badge/Signal%20Wire-%40WorldPulsemonitor-111111?style=for-the-badge&logo=x&logoColor=white)](https://x.com/WorldPulsemonitor)
 [![Ops Room](https://img.shields.io/badge/Ops%20Room-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ChVy7SF4)
 
 ![Crucix Dashboard](docs/dashboard.png)
@@ -37,14 +37,14 @@
 
 </div>
 
-> **Live website:** [https://www.crucix.live/](https://www.crucix.live/)
+> **Live website:** [https://www.WorldPulse.live/](https://www.WorldPulse.live/)
 > Explore the public demo first, then clone the repo to run Crucix locally.
 
 Crucix pulls satellite fire detection, flight tracking, radiation monitoring, satellite constellation tracking, economic indicators, live market prices, conflict data, sanctions lists, and social sentiment from 27 open-source intelligence feeds — in parallel, every 15 minutes — and renders everything on a single self-contained Jarvis-style dashboard.
 
 Hook it up to an LLM and it becomes a **two-way intelligence assistant** — pushing multi-tier alerts to Telegram and Discord when something meaningful changes, responding to commands like `/brief` and `/sweep` from your phone, and generating actionable trade ideas grounded in real cross-domain data. Your own analyst that watches the world while you sleep.
 
-Try the live demo first at [https://www.crucix.live/](https://www.crucix.live/), then clone the repo when you want the full local stack.
+Try the live demo first at [https://www.WorldPulse.live/](https://www.WorldPulse.live/), then clone the repo when you want the full local stack.
 
 No cloud. No telemetry. No subscriptions. Just `node server.mjs` and you're running.
 
@@ -273,9 +273,9 @@ Crucix still works with zero API keys. 18+ sources require no authentication at 
 ## Architecture
 
 ```
-crucix/
+WorldPulse/
 ├── server.mjs                 # Express dev server (SSE, auto-refresh, LLM, bot commands)
-├── crucix.config.mjs          # Configuration with env var overrides + delta thresholds
+├── WorldPulse.config.mjs          # Configuration with env var overrides + delta thresholds
 ├── diag.mjs                   # Diagnostic script — run if server fails to start
 ├── .env.example               # All documented env vars
 ├── package.json               # Runtime: express | Optional: discord.js
@@ -424,7 +424,7 @@ All settings are in `.env` with sensible defaults:
 | `DISCORD_GUILD_ID` | — | Server ID (instant slash command registration) |
 | `DISCORD_WEBHOOK_URL` | — | Webhook URL (alert-only fallback, no bot needed) |
 
-Delta engine thresholds (how sensitive the system is to changes between sweeps) can be customized in `crucix.config.mjs` under the `delta.thresholds` section. The defaults are tuned to filter out noise while catching meaningful moves.
+Delta engine thresholds (how sensitive the system is to changes between sweeps) can be customized in `WorldPulse.config.mjs` under the `delta.thresholds` section. The defaults are tuned to filter out noise while catching meaningful moves.
 
 ---
 
