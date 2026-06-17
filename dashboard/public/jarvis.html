@@ -393,7 +393,7 @@ function t(keyPath, fallback) {
 let globe = null;
 let globeInitialized = false;
 let flightsVisible = true;
-let lowPerfMode = localStorage.getItem('crucix_low_perf') === 'true';
+let lowPerfMode = localStorage.getItem('WorldPulse_low_perf') === 'true';
 let isFlat = shouldStartFlat();
 let currentRegion = 'world';
 let flatSvg, flatProjection, flatPath, flatG, flatZoom, flatW, flatH;
@@ -544,7 +544,7 @@ function setMapLoading(show, text='Initializing 3D Globe'){
 
 function togglePerfMode(){
   lowPerfMode = !lowPerfMode;
-  localStorage.setItem('crucix_low_perf', String(lowPerfMode));
+  localStorage.setItem('WorldPulse_low_perf', String(lowPerfMode));
   document.body.classList.toggle('low-perf', lowPerfMode);
   const perfStatus = document.getElementById('perfStatus');
   if(perfStatus) perfStatus.textContent = lowPerfMode ? 'LITE' : 'FULL';
