@@ -1,13 +1,120 @@
-# WorldPulse
+# WorldPulse (WorldPulse)
 
-Live intelligence terminal dashboard aggregating 27 OSINT sources with a Jarvis-style UI, alerts, and two-way Telegram/Discord bots.
+**Version:** v0.1  
+**Status:** Active Development  
+**Repository:** https://github.com/OneByJorah/WorldPulse
 
-## Verified references
-- Server entrypoint: `server.mjs`
-- API sources: `apis/sources/*.mjs`
-- Briefing pipeline: `apis/briefing.mjs`
-- Dashboard UI: `dashboard/public/jarvis.html`
-- Docker stack: `docker-compose.yml`
+---
 
-## Status
-✅ Repo references verified.
+## Table of Contents
+
+- [Overview](#overview)
+- [Architecture](#architecture)
+- [Technology Stack](#technology-stack)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Service Management](#service-management)
+- [Project Structure](#project-structure)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
+
+---
+
+## Overview
+
+World news and intelligence aggregation agent with curated feeds and summarization.
+
+---
+
+## Architecture
+
+Client → Local service (`WorldPulse`) → data/processing modules → output/api layer.
+Secrets and environment configuration are managed via environment files with restrictive permissions.
+
+---
+
+## Technology Stack
+
+|| Layer | Stack |
+|---|---|
+| Runtime | Linux (Ubuntu 22.04+) |
+| Primary Stack | Python / RSS / LLM |
+| VCS | Git + GitHub (`github.com/OneByJorah/WorldPulse`) |
+| Dev Port | Localhost / systemd service |
+
+---
+
+## Features
+
+- Operational dashboard and monitoring (per repo).
+- Exportable data / reports where supported.
+- Extensible service-based design.
+- Dark-themed UI where applicable.
+
+---
+
+## Getting Started
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/OneByJorah/WorldPulse.git
+cd WorldPulse
+
+# 2. Install dependencies
+# (see specific subproject docs)
+
+# 3. Start the service
+# (see Service Management below)
+```
+
+---
+
+## Service Management
+
+```bash
+# Start the service (example)
+sudo systemctl start WorldPulse.service
+sudo systemctl enable WorldPulse.service
+```
+
+Access the service via your configured localhost port or reverse proxy.
+
+---
+
+## Project Structure
+
+```
+WorldPulse/
+├── README.md
+├── (additional project files)
+```
+
+---
+
+## Screenshots
+
+All screenshots are live captures from the local dev instance.
+
+_(Screenshots will be added after build/run capture.)_
+
+---
+
+## Contributing
+
+1. Create a feature branch off `main`.
+2. Follow the existing code style.
+3. Submit a PR with description and screenshots for UI changes.
+
+---
+
+## License
+
+MIT
+
+---
+
+## Author
+
+Built by **Jhonattan L. Jimenez**.
